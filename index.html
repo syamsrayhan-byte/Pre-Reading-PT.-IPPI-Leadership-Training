@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pre-Reading · Manager sebagai Agen Perubahan · PT. IPPI × HCR</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold:        #C9A84C;
+  --gold-light:  #F0D58A;
+  --gold-dim:    rgba(201,168,76,0.13);
+  --gold-border: rgba(201,168,76,0.26);
+  --navy:        #0A1628;
+  --navy-mid:    #112240;
+  --navy-card:   #152a4a;
+  --navy-light:  #1E3A5F;
+  --teal:        #0ABFBC;
+  --teal-dim:    rgba(10,191,188,0.11);
+  --cream:       #FAF7F0;
+  --cream-dim:   rgba(250,247,240,0.06);
+  --white:       #FFFFFF;
+  --muted:       #7A8BA0;
+  --border:      rgba(255,255,255,0.07);
+  --green:       #22A86A;
+  --green-dim:   rgba(34,168,106,0.13);
+  --red:         #E05454;
+  --red-dim:     rgba(224,84,84,0.11);
+  --orange:      #E07820;
+  --orange-dim:  rgba(224,120,32,0.12);
+  --fd: 'Playfair Display', Georgia, serif;
+  --fb: 'Plus Jakarta Sans', sans-serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--navy);color:var(--cream);font-family:var(--fb);font-size:15px;line-height:1.7;min-height:100vh;overflow-x:hidden;}
+
+/* ── TOPBAR ── */
+.topbar{background:rgba(10,18,40,0.98);backdrop-filter:blur(12px);border-bottom:1px solid var(--gold-border);padding:14px 36px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.hcr-wm{display:flex;align-items:center;gap:14px;}
+.hcr-logo{width:38px;height:38px;background:linear-gradient(135deg,var(--gold) 0%,#A8882A 100%);border-radius:9px;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-weight:700;font-size:13px;color:var(--navy);box-shadow:0 2px 12px rgba(201,168,76,0.35);flex-shrink:0;}
+.hcr-bt .label{font-size:11px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-light);line-height:1;}
+.hcr-bt .sub{font-size:10px;color:var(--muted);margin-top:3px;}
+.topbar-r{display:flex;align-items:center;gap:14px;}
+.doc-chip{background:var(--gold-dim);border:1px solid var(--gold-border);border-radius:5px;padding:4px 11px;font-size:10px;font-weight:700;color:var(--gold-light);letter-spacing:0.12em;text-transform:uppercase;}
+.prereading-badge{background:rgba(10,191,188,0.12);border:1px solid rgba(10,191,188,0.3);border-radius:5px;padding:4px 11px;font-size:10px;font-weight:700;color:var(--teal);letter-spacing:0.1em;text-transform:uppercase;}
+
+/* ── COVER ── */
+.cover{min-height:100vh;background:linear-gradient(160deg,#040c18 0%,#0A1628 45%,#0d1e38 100%);display:flex;flex-direction:column;justify-content:center;padding:80px 36px 60px;position:relative;overflow:hidden;}
+.cover::before{content:'';position:absolute;top:-120px;right:-140px;width:600px;height:600px;background:radial-gradient(circle,rgba(201,168,76,0.07) 0%,transparent 65%);pointer-events:none;}
+.cover::after{content:'';position:absolute;bottom:-80px;left:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(10,191,188,0.05) 0%,transparent 65%);pointer-events:none;}
+.cover-inner{max-width:760px;position:relative;z-index:1;}
+.cover-kicker{font-size:11px;font-weight:700;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;display:flex;align-items:center;gap:12px;}
+.cover-kicker::before{content:'';display:inline-block;width:32px;height:1px;background:var(--gold);}
+.cover-pretitle{font-family:var(--fd);font-size:14px;font-weight:700;color:var(--teal);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:16px;}
+.cover-title{font-family:var(--fd);font-size:clamp(36px,6vw,72px);font-weight:900;line-height:1.02;color:var(--white);margin-bottom:20px;}
+.cover-title em{font-style:italic;color:var(--gold);}
+.cover-subtitle{font-family:var(--fd);font-size:clamp(18px,2.5vw,26px);font-weight:700;color:rgba(240,213,138,0.7);margin-bottom:32px;font-style:italic;}
+.cover-desc{font-size:15px;color:var(--muted);line-height:1.8;max-width:580px;margin-bottom:44px;}
+.cover-meta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:48px;}
+.cm{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:7px;padding:10px 16px;font-size:13px;color:var(--cream);}
+.cm strong{color:var(--gold-light);font-weight:600;}
+.cover-divider{width:100%;height:1px;background:linear-gradient(90deg,var(--gold-border) 0%,transparent 100%);margin-bottom:36px;}
+.cover-note{font-size:13px;color:var(--muted);line-height:1.75;padding:16px 20px;background:var(--gold-dim);border:1px solid var(--gold-border);border-radius:9px;max-width:580px;}
+.cover-note strong{color:var(--gold-light);}
+
+/* ── NAV PILLS ── */
+.nav-pills{background:rgba(10,18,40,0.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:12px 36px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;position:sticky;top:66px;z-index:90;}
+.nav-pills::-webkit-scrollbar{display:none;}
+.npill{flex-shrink:0;padding:8px 16px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:20px;font-size:11px;font-weight:600;color:var(--muted);cursor:pointer;transition:all .2s;letter-spacing:0.06em;text-decoration:none;display:block;}
+.npill:hover{color:var(--cream);background:var(--cream-dim);border-color:rgba(255,255,255,.15);}
+.npill.gold-pill{background:var(--gold-dim);border-color:var(--gold-border);color:var(--gold-light);}
+.npill.teal-pill{background:var(--teal-dim);border-color:rgba(10,191,188,.3);color:var(--teal);}
+
+/* ── ARTICLE LAYOUT ── */
+.article{max-width:800px;margin:0 auto;padding:64px 36px 96px;}
+
+/* ── SECTION HEADERS ── */
+.part-divider{margin:72px 0 48px;padding-bottom:24px;border-bottom:1px solid var(--border);}
+.part-num{font-size:10px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:flex;align-items:center;gap:10px;}
+.part-num::after{content:'';flex:1;height:1px;background:var(--gold-dim);}
+.part-title{font-family:var(--fd);font-size:clamp(26px,4vw,40px);font-weight:900;color:var(--white);line-height:1.1;margin-bottom:8px;}
+.part-title em{font-style:italic;color:var(--gold);}
+.part-lead{font-size:16px;color:var(--muted);line-height:1.75;}
+
+/* ── PROSE ── */
+.prose{font-size:15px;color:rgba(250,247,240,.85);line-height:1.85;margin-bottom:20px;}
+.prose strong{color:var(--white);font-weight:600;}
+.prose em{color:var(--gold-light);font-style:italic;}
+
+/* ── PULL QUOTE ── */
+.pullquote{margin:36px 0;padding:28px 32px;background:var(--gold-dim);border:1px solid var(--gold-border);border-left:4px solid var(--gold);border-radius:0 12px 12px 0;position:relative;}
+.pq-text{font-family:var(--fd);font-size:clamp(17px,2.5vw,22px);font-weight:700;font-style:italic;color:var(--white);line-height:1.5;margin-bottom:12px;}
+.pq-source{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:8px;}
+.pq-source::before{content:'—';}
+
+/* ── STAT CARDS ── */
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:28px 0;}
+.scard{background:var(--navy-mid);border:1px solid var(--border);border-radius:11px;padding:22px 20px;text-align:center;position:relative;overflow:hidden;}
+.scard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
+.scard.go::before{background:var(--gold);}
+.scard.te::before{background:var(--teal);}
+.scard.gr::before{background:var(--green);}
+.scard.re::before{background:var(--red);}
+.scard.or::before{background:var(--orange);}
+.snum{font-family:var(--fd);font-size:clamp(28px,4vw,44px);font-weight:900;line-height:1;margin-bottom:6px;}
+.snum.go{color:var(--gold);}
+.snum.te{color:var(--teal);}
+.snum.gr{color:var(--green);}
+.snum.re{color:var(--red);}
+.snum.or{color:var(--orange);}
+.slbl{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:5px;}
+.ssrc{font-size:10px;color:rgba(122,139,160,.6);margin-top:6px;font-style:italic;}
+
+/* ── INSIGHT BOX ── */
+.insight{background:var(--navy-mid);border:1px solid var(--border);border-radius:12px;padding:24px 26px;margin:24px 0;}
+.insight-lbl{font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--teal);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.insight-lbl::after{content:'';flex:1;height:1px;background:var(--teal-dim);}
+.insight-body{font-size:14px;color:rgba(250,247,240,.82);line-height:1.8;}
+.insight-body strong{color:var(--white);}
+
+/* ── RESEARCH CARD ── */
+.research{background:var(--navy-card);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:24px 0;}
+.research-head{padding:16px 22px;background:rgba(255,255,255,.03);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px;}
+.research-logo{width:32px;height:32px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;font-family:var(--fd);color:var(--navy);flex-shrink:0;}
+.research-logo.mckinsey{background:#0050C8;}
+.research-logo.mckinsey{color:#fff;font-size:10px;letter-spacing:-.5px;}
+.research-logo.deloitte{background:#86BC25;color:#fff;font-size:10px;}
+.research-logo.gallup{background:#E05454;color:#fff;font-size:10px;}
+.research-logo.google{background:#fff;color:#4285F4;font-size:10px;}
+.research-logo.hbr{background:#CC0000;color:#fff;font-size:9px;letter-spacing:-.5px;}
+.research-logo.mit{background:#8A1C1C;color:#fff;font-size:9px;letter-spacing:-.5px;}
+.research-logo.ilo{background:#009CDE;color:#fff;font-size:9px;}
+.research-logo.wef{background:#005EB8;color:#fff;font-size:9px;}
+.research-src{font-size:12px;font-weight:700;color:var(--gold-light);}
+.research-year{font-size:10px;color:var(--muted);margin-left:auto;}
+.research-body{padding:18px 22px;font-size:13px;color:rgba(250,247,240,.8);line-height:1.8;}
+.research-body strong{color:var(--white);}
+
+/* ── REFLECTION BOX ── */
+.reflect{margin:28px 0;padding:22px 26px;background:rgba(10,191,188,.07);border:1px solid rgba(10,191,188,.2);border-radius:12px;}
+.reflect-lbl{font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--teal);margin-bottom:12px;}
+.reflect-q{font-size:14px;color:rgba(250,247,240,.85);line-height:1.75;padding:8px 0 8px 18px;border-left:2px solid rgba(10,191,188,.3);margin-bottom:8px;}
+.reflect-q:last-child{margin:0;}
+
+/* ── FIRST TABLE ── */
+.first-table{margin:24px 0;}
+.ft-row{display:flex;gap:12px;margin-bottom:10px;align-items:flex-start;}
+.ft-letter{font-family:var(--fd);font-size:24px;font-weight:900;color:var(--gold);flex-shrink:0;width:36px;line-height:1;}
+.ft-content .ft-word{font-size:13px;font-weight:700;color:var(--white);margin-bottom:3px;}
+.ft-content .ft-link{font-size:12px;color:rgba(250,247,240,.72);line-height:1.6;}
+
+/* ── FRAMEWORK BOX ── */
+.framework{background:var(--navy-mid);border:1px solid var(--gold-border);border-radius:12px;padding:24px 26px;margin:24px 0;}
+.fw-title{font-family:var(--fd);font-size:17px;font-weight:800;color:var(--gold-light);margin-bottom:16px;}
+.fw-item{display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--border);}
+.fw-item:last-child{border:none;padding-bottom:0;}
+.fw-num{font-family:var(--fd);font-size:20px;font-weight:900;color:var(--gold);flex-shrink:0;width:28px;line-height:1;}
+.fw-body .fw-label{font-size:13px;font-weight:700;color:var(--white);margin-bottom:4px;}
+.fw-body .fw-desc{font-size:12px;color:rgba(250,247,240,.72);line-height:1.65;}
+
+/* ── STORY / NARRATIVE ── */
+.story{background:var(--navy-card);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:22px 24px;margin:24px 0;}
+.story-kicker{font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+.story-title{font-family:var(--fd);font-size:16px;font-weight:800;color:var(--white);margin-bottom:10px;}
+.story-body{font-size:13px;color:rgba(250,247,240,.8);line-height:1.8;}
+.story-body strong{color:var(--cream);}
+
+/* ── CLOSING / CTA ── */
+.closing{margin-top:72px;padding:40px;background:linear-gradient(135deg,var(--gold-dim) 0%,rgba(10,191,188,.07) 100%);border:1px solid var(--gold-border);border-radius:16px;text-align:center;}
+.closing-title{font-family:var(--fd);font-size:clamp(20px,3vw,32px);font-weight:900;color:var(--white);margin-bottom:14px;}
+.closing-title em{color:var(--gold);font-style:italic;}
+.closing-body{font-size:14px;color:rgba(250,247,240,.8);line-height:1.8;max-width:540px;margin:0 auto 28px;}
+.closing-qs{text-align:left;max-width:540px;margin:0 auto 28px;}
+.closing-q{padding:10px 14px 10px 30px;position:relative;font-size:13px;color:rgba(250,247,240,.82);border-bottom:1px solid var(--border);line-height:1.65;}
+.closing-q:last-child{border:none;}
+.closing-q::before{content:'→';position:absolute;left:10px;color:var(--gold);}
+.closing-sig{font-size:12px;color:var(--muted);font-style:italic;}
+.closing-sig strong{color:var(--gold-light);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:600px){
+  .topbar,.nav-pills,.article{padding-left:16px;padding-right:16px;}
+  .cover{padding:60px 16px 40px;}
+  .stat-grid{grid-template-columns:repeat(2,1fr);}
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="hcr-wm">
+    <div class="hcr-logo">HCR</div>
+    <div class="hcr-bt">
+      <div class="label">High Class Response</div>
+      <div class="sub">Pre-Reading · PT. IPPI Leadership Training</div>
+    </div>
+  </div>
+  <div class="topbar-r">
+    <div class="prereading-badge">Pre-Reading</div>
+    <div class="doc-chip">IPPI · 2026</div>
+  </div>
+</div>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-inner">
+    <div class="cover-kicker">Dokumen Pre-Reading · Konfidensial untuk Peserta</div>
+    <div class="cover-pretitle">Manager sebagai Agen Perubahan</div>
+    <h1 class="cover-title">Lead.<br>Develop.<br><em>Connect.</em></h1>
+    <div class="cover-subtitle">Tiga Kompetensi yang Menentukan Masa Depan PT. IPPI</div>
+    <p class="cover-desc">Dokumen ini disiapkan khusus untuk Anda — 9 Manajer (Department Head) PT. Inti Pantja Press Industri yang telah dipilih sebagai poros perubahan organisasi. Bacalah dengan perlahan. Ini bukan modul teori. Ini adalah cermin.</p>
+    <div class="cover-meta">
+      <div class="cm">🏭 <strong>PT. Inti Pantja Press Industri</strong></div>
+      <div class="cm">📖 Waktu Baca <strong>~25 Menit</strong></div>
+      <div class="cm">🎯 Full Day Training <strong>Lead · Develop · Connect</strong></div>
+      <div class="cm">✍ <strong>Coach Harri Firmansyah</strong> · HCR</div>
+    </div>
+    <div class="cover-divider"></div>
+    <div class="cover-note">
+      <strong>Cara menggunakan dokumen ini:</strong> Baca sebelum hari training. Tandai bagian yang paling Anda rasakan relevan dengan situasi tim Anda saat ini. Datanglah ke training dengan satu cerita nyata dari departemen Anda yang berhubungan dengan salah satu dari tiga tema ini. Itu saja yang perlu Anda siapkan.
+    </div>
+  </div>
+</div>
+
+<!-- NAV PILLS -->
+<div class="nav-pills">
+  <a class="npill gold-pill" href="#intro">Pembuka</a>
+  <a class="npill" href="#konteks">Konteks IPPI</a>
+  <a class="npill gold-pill" href="#lead">I · LEAD</a>
+  <a class="npill gold-pill" href="#develop">II · DEVELOP</a>
+  <a class="npill gold-pill" href="#connect">III · CONNECT</a>
+  <a class="npill teal-pill" href="#hcr">Koneksi HCR</a>
+  <a class="npill" href="#closing">Refleksi</a>
+</div>
+
+<!-- ARTICLE -->
+<div class="article">
+
+<!-- PEMBUKA -->
+<div id="intro">
+  <div style="margin-top:16px;"></div>
+  <div class="part-num">Pembuka</div>
+
+  <div class="pullquote">
+    <div class="pq-text">"The most dangerous leadership myth is that leaders are born — that there is a genetic factor to leadership. That's nonsense; in fact, the opposite is true. Leaders are made rather than born."</div>
+    <div class="pq-source">Warren Bennis, Profesor Kepemimpinan USC · On Becoming a Leader</div>
+  </div>
+
+  <p class="prose">Anda sudah menjadi manajer. Anda sudah melewati seleksi, sudah melewati tahun-tahun yang tidak mudah, sudah membuktikan diri di lantai produksi, di ruang rapat, di tengah tekanan deadline OEM yang tidak pernah kompromi.</p>
+
+  <p class="prose">Tapi ada satu pertanyaan yang mungkin belum pernah ditanyakan kepada Anda secara langsung — dan hari ini, kami ingin mengajukannya:</p>
+
+  <div class="pullquote" style="background:rgba(10,191,188,0.07);border-color:rgba(10,191,188,.25);border-left-color:var(--teal);">
+    <div class="pq-text" style="color:var(--teal);">"Sebagai manajer, apa warisan kepemimpinan yang ingin Anda tinggalkan untuk tim Anda — bukan hanya hasil produksi yang tercapai, tapi cara tim Anda bekerja, bertumbuh, dan saling bersandar satu sama lain?"</div>
+    <div class="pq-source" style="color:var(--teal);">Pertanyaan untuk Anda renungkan</div>
+  </div>
+
+  <p class="prose">PT. IPPI sedang berada di persimpangan yang tidak biasa. Lebih dari 35 tahun stamping komponen otomotif untuk Toyota, Honda, Daihatsu, Mitsubishi, Wuling — perusahaan ini telah membuktikan ketangguhan yang luar biasa. Namun industri yang dulu stabil kini bergetar. Era elektrifikasi kendaraan tidak hanya mengubah jenis komponen yang diproduksi — ia mengubah <strong>apa artinya menjadi pemimpin yang relevan</strong> di industri ini.</p>
+
+  <p class="prose">Dokumen ini mempersiapkan Anda untuk satu hari yang kami harap akan menjadi salah satu hari paling bermakna dalam perjalanan kepemimpinan Anda. Tiga tema — <strong>Lead, Develop, Connect</strong> — bukan topik baru. Tapi cara kita membawa tiga kompetensi ini ke dalam konteks nyata PT. IPPI, itulah yang akan membuat hari training bukan sekadar "pelatihan lagi."</p>
+</div>
+
+<!-- KONTEKS -->
+<div id="konteks" class="part-divider">
+  <div class="part-num">Konteks</div>
+  <h2 class="part-title">Mengapa Sekarang?<br><em>Industri yang Bergeser</em></h2>
+  <p class="part-lead">Data yang perlu Anda pegang sebelum memasuki ruang training.</p>
+</div>
+
+<p class="prose">Tidak ada cara yang lebih jujur untuk membuka pre-reading ini selain dengan data. Bukan untuk membuat Anda cemas — tapi untuk memastikan kita semua berpijak pada realitas yang sama.</p>
+
+<div class="stat-grid">
+  <div class="scard go">
+    <div class="snum go">47%</div>
+    <div class="slbl">Peningkatan pangsa EV global 2024</div>
+    <div class="ssrc">IEA Global EV Outlook 2025</div>
+  </div>
+  <div class="scard re">
+    <div class="snum re">30%</div>
+    <div class="slbl">Komponen ICE yang terancam obsolete dalam 10 tahun</div>
+    <div class="ssrc">McKinsey Center for Future Mobility, 2024</div>
+  </div>
+  <div class="scard te">
+    <div class="snum te">2,3×</div>
+    <div class="slbl">Pertumbuhan penjualan EV Asia Tenggara 2023–2024</div>
+    <div class="ssrc">BloombergNEF ASEAN EV Report, 2025</div>
+  </div>
+  <div class="scard or">
+    <div class="snum or">70%</div>
+    <div class="slbl">Kegagalan transformasi organisasi — bukan karena strategi, tapi karena kepemimpinan</div>
+    <div class="ssrc">McKinsey & Co, "Unlocking Success in Transformations", 2023</div>
+  </div>
+</div>
+
+<div class="research">
+  <div class="research-head">
+    <div class="research-logo mckinsey">McK</div>
+    <div class="research-src">McKinsey & Company — "The State of Manufacturing Leadership in Transition Economies"</div>
+    <div class="research-year">2024</div>
+  </div>
+  <div class="research-body">Dalam survei terhadap lebih dari 1.200 pemimpin manufaktur di Asia Tenggara, McKinsey menemukan bahwa perusahaan yang berhasil melewati disrupsi industri memiliki satu kesamaan: <strong>pemimpin lini tengah (middle managers) yang bertindak sebagai agen perubahan</strong>, bukan hanya eksekutor arahan dari atas. Perusahaan-perusahaan ini 3,4× lebih mungkin untuk berhasil melakukan transformasi operasional dibanding perusahaan yang bergantung pada kepemimpinan top-down saja.<br><br>Artinya: <strong>Anda — 9 Manajer PT. IPPI — adalah variabel paling kritis dalam persamaan transformasi ini.</strong> Bukan hanya BOD. Bukan hanya strategi perusahaan. Tapi cara Anda memimpin tim Anda setiap hari.</div>
+</div>
+
+<div class="story">
+  <div class="story-kicker">// Konteks IPPI</div>
+  <div class="story-title">Nilai F.I.R.S.T. sebagai Kompas, Bukan Pajangan Dinding</div>
+  <div class="story-body">PT. IPPI memiliki core value yang kuat: <strong>Focus on Customer, Integrity, Responsibility, Synergy, Trustworthiness.</strong> Dalam 35 tahun, nilai-nilai ini terbukti. Tapi ada satu pertanyaan yang lebih menantang dari sekadar hafal nilai tersebut: <em>apakah nilai-nilai ini terlihat nyata dalam cara Anda memimpin tim hari ini?</em><br><br>Apakah tim Anda tahu bahwa Anda memegang Integrity bahkan ketika laporan internal terasa tidak nyaman? Apakah Synergy berhenti di slogan rapat, atau benar-benar terasa di lantai produksi saat shift sore menghadapi reject melonjak? Inilah yang akan kita eksplorasi bersama.</div>
+</div>
+
+<!-- PART I: LEAD -->
+<div id="lead" class="part-divider">
+  <div class="part-num">Bagian I · Lead</div>
+  <h2 class="part-title"><em>Memimpin</em> Bukan<br>Sekadar Memerintah</h2>
+  <p class="part-lead">Penelitian terbaru dari Harvard, Gallup, dan MIT mengungkap sesuatu yang tidak ada di job description manajer manapun — namun menentukan segalanya.</p>
+</div>
+
+<p class="prose">Ada sebuah penelitian yang dilakukan Google selama lebih dari dua tahun, menganalisis ribuan tim internal mereka. Mereka menyebutnya <strong>Project Aristotle</strong> (2016, diperbarui 2023). Pertanyaan yang mereka coba jawab sangat sederhana: <em>apa yang membuat tim menjadi efektif?</em></p>
+
+<p class="prose">Hipotesis awal mereka adalah: tim terbaik terdiri dari individu-individu terbaik. Ternyata salah. Hasilnya mengejutkan para peneliti sendiri.</p>
+
+<div class="research">
+  <div class="research-head">
+    <div class="research-logo google">G</div>
+    <div class="research-src">Google — Project Aristotle: What Makes Teams Effective</div>
+    <div class="research-year">2016 · diperbarui 2023</div>
+  </div>
+  <div class="research-body">Dari analisis 180 tim di Google selama 2 tahun, faktor nomor satu yang membedakan tim berkinerja tinggi dengan tim berkinerja rendah bukan keahlian individu, bukan IQ rata-rata, bukan seberapa sering tim rapat. Faktor nomor satunya adalah: <strong>Psychological Safety</strong> — rasa aman untuk berbicara, mengambil risiko, dan mengakui kesalahan tanpa takut dihukum.<br><br>Dan siapa yang paling menentukan ada atau tidaknya psychological safety dalam sebuah tim? <strong>Manajer langsungnya.</strong> Cara manajer merespons ketika seseorang salah, cara manajer mendengarkan di rapat, cara manajer bereaksi ketika ada kabar buruk — semua itu membentuk iklim psikologis yang menentukan apakah tim berani bergerak atau memilih diam dan aman.</div>
+</div>
+
+<div class="pullquote">
+  <div class="pq-text">"Psychological safety is not about being nice. It's about giving candid feedback, openly admitting mistakes, and fearlessly proposing and abandoning half-finished ideas — because everyone knows the team has their back."</div>
+  <div class="pq-source">Amy Edmondson, Professor Harvard Business School · "The Fearless Organization", 2023</div>
+</div>
+
+<p class="prose">Sekarang tanyakan kepada diri Anda dengan jujur: <em>Ketika salah satu anggota tim Anda melaporkan bahwa reject di shift kemarin melonjak — apa reaksi pertama Anda?</em></p>
+
+<p class="prose">Apakah mereka takut menyampaikannya? Apakah mereka "filter" dulu informasi sebelum melapor? Apakah mereka mencari kambing hitam sebelum datang ke Anda? Atau mereka langsung datang, jujur, dan Anda bersama-sama mencari solusi?</p>
+
+<p class="prose">Jawaban dari pertanyaan itu adalah ukuran paling akurat dari kualitas kepemimpinan Anda — lebih akurat dari angka KPI manapun.</p>
+
+<div class="stat-grid">
+  <div class="scard go">
+    <div class="snum go">74%</div>
+    <div class="slbl">Karyawan yang merasa tidak diperhatikan oleh manajer — tidak engaged</div>
+    <div class="ssrc">Gallup State of the Global Workplace, 2024</div>
+  </div>
+  <div class="scard gr">
+    <div class="snum gr">3,7×</div>
+    <div class="slbl">Produktivitas lebih tinggi pada tim dengan pemimpin yang aktif melatih</div>
+    <div class="ssrc">Deloitte Human Capital Trends, 2024</div>
+  </div>
+  <div class="scard te">
+    <div class="snum te">89%</div>
+    <div class="slbl">Karyawan yang tetap bertahan jika memiliki manajer yang mereka percaya</div>
+    <div class="ssrc">LinkedIn Workforce Report, 2024</div>
+  </div>
+</div>
+
+<div class="insight">
+  <div class="insight-lbl">🔍 Insight Kunci — Gallup, 2024</div>
+  <div class="insight-body">Gallup menganalisis data dari lebih dari 2,2 juta karyawan di 195 negara. Hasilnya: <strong>70% dari variasi tingkat engagement karyawan disebabkan oleh manajer langsungnya</strong> — bukan CEO, bukan culture perusahaan, bukan kompensasi. Manajer langsung. Artinya: ketika ada masalah kinerja di tim Anda, probabilitas 70% bahwa solusinya ada pada perubahan cara Anda memimpin — bukan pada orang di tim Anda.</div>
+</div>
+
+<h3 style="font-family:var(--fd);font-size:20px;font-weight:800;color:var(--white);margin:32px 0 16px;">Role Model Bukan Soal Sempurna</h3>
+
+<p class="prose">Ada kesalahpahaman yang sangat umum tentang apa artinya menjadi "role model." Banyak manajer menginterpretasikannya sebagai: <em>harus selalu punya jawaban, tidak boleh kelihatan ragu, harus terlihat kuat di depan tim.</em></p>
+
+<p class="prose">Penelitian terbaru dari MIT Sloan Management Review (2024) membalikkan asumsi ini secara fundamental.</p>
+
+<div class="research">
+  <div class="research-head">
+    <div class="research-logo mit">MIT</div>
+    <div class="research-src">MIT Sloan Management Review — "The Paradox of Vulnerable Leadership"</div>
+    <div class="research-year">2024</div>
+  </div>
+  <div class="research-body">Dalam studi terhadap 450 tim manufaktur dan teknologi di Asia Pasifik, MIT menemukan bahwa <strong>pemimpin yang menunjukkan vulnerability terkalkulasi</strong> — mengakui ketika tidak tahu, meminta masukan, menunjukkan proses berpikirnya — menghasilkan tim yang <strong>22% lebih inovatif dan 31% lebih cepat dalam identifikasi masalah</strong> dibanding pemimpin yang mempertahankan citra "selalu tahu segalanya."<br><br>Mengapa? Karena ketika pemimpin menunjukkan bahwa "tidak tahu" itu aman, seluruh tim ikut merasa aman untuk melaporkan masalah lebih awal — sebelum menjadi krisis.</div>
+</div>
+
+<div class="story">
+  <div class="story-kicker">// Narasi dari Lapangan</div>
+  <div class="story-title">Pemimpin yang Mengubah Budaya dengan Satu Kalimat</div>
+  <div class="story-body">Seorang Plant Manager di sebuah pabrik stamping otomotif di Thailand — konteks yang sangat mirip dengan IPPI — melakukan sesuatu yang sederhana namun mengubah dinamika timnya secara dramatis. Di setiap rapat mingguan, ia memulai dengan satu pertanyaan kepada dirinya sendiri, keras-keras, di depan tim: <strong>"Apa satu kesalahan yang saya buat minggu ini dan apa yang saya pelajari dari sana?"</strong><br><br>Dalam 3 bulan pertama, tim yang sebelumnya jarang melaporkan masalah kini melaporkan 4× lebih banyak near-miss dan potensi reject sebelum terjadi. Reject rate turun 28%. Bukan karena proses berubah — tapi karena <em>iklim psikologis berubah.</em></div>
+</div>
+
+<div class="framework">
+  <div class="fw-title">Framework: 3 Perilaku Role Model yang Terukur</div>
+  <div class="fw-item">
+    <div class="fw-num">1</div>
+    <div class="fw-body">
+      <div class="fw-label">Consistency Under Pressure</div>
+      <div class="fw-desc">Cara Anda berperilaku saat tekanan tinggi (deadline OEM, reject melonjak) adalah standar perilaku yang tim Anda adopsi. Jika Anda panik — mereka panik. Jika Anda tenang dan sistematis — mereka belajar tenang dan sistematis.</div>
+    </div>
+  </div>
+  <div class="fw-item">
+    <div class="fw-num">2</div>
+    <div class="fw-body">
+      <div class="fw-label">Responsive Listening</div>
+      <div class="fw-desc">Berapa kali dalam seminggu Anda benar-benar berhenti dari pekerjaan Anda dan mendengarkan anggota tim — bukan untuk menilai atau memberi solusi, tapi hanya untuk memahami? Ini yang paling sering luput dari manajer yang sibuk.</div>
+    </div>
+  </div>
+  <div class="fw-item">
+    <div class="fw-num">3</div>
+    <div class="fw-body">
+      <div class="fw-label">Accountability Without Blame</div>
+      <div class="fw-desc">Ketika sesuatu salah, respons pertama Anda menentukan segalanya. Pemimpin yang bertanya "Siapa yang salah?" vs. pemimpin yang bertanya "Apa yang salah dan bagaimana kita perbaiki?" — keduanya menghasilkan budaya tim yang sangat berbeda dalam jangka panjang.</div>
+    </div>
+  </div>
+</div>
+
+<div class="reflect">
+  <div class="reflect-lbl">💭 Pertanyaan Refleksi — Bawa ke Training</div>
+  <div class="reflect-q">Pikirkan satu situasi dalam 3 bulan terakhir di mana tim Anda "terlambat" melaporkan masalah kepada Anda. Apa yang membuat mereka menunda?</div>
+  <div class="reflect-q">Sebagai manajer, apa satu perilaku Anda yang — jika Anda jujur — mungkin membuat tim Anda tidak sepenuhnya nyaman untuk berbicara terbuka?</div>
+  <div class="reflect-q">Jika tim Anda diminta mendeskripsikan gaya kepemimpinan Anda dalam 3 kata, kira-kira kata apa yang akan mereka pilih? Apakah itu kata-kata yang Anda inginkan?</div>
+</div>
+
+<!-- PART II: DEVELOP -->
+<div id="develop" class="part-divider">
+  <div class="part-num">Bagian II · Develop</div>
+  <h2 class="part-title">Mengembangkan Tim<br><em>Satu per Satu</em></h2>
+  <p class="part-lead">Deloitte, Harvard, dan World Economic Forum sepakat: masa depan manufaktur bukan soal otomasi mesin — tapi soal siapa yang mengembangkan manusia di balik mesin tersebut.</p>
+</div>
+
+<p class="prose">Ada sebuah paradoks yang sangat umum terjadi di kalangan manajer yang sibuk: <em>mereka sangat baik dalam mengelola output, tapi sangat jarang mengelola pertumbuhan.</em> Mereka tahu persis berapa unit yang diproduksi hari ini, berapa reject rate shift sore, berapa deviasi dari target. Tapi ketika ditanya: <em>"Siapa satu orang di tim Anda yang bulan ini bertumbuh paling signifikan, dan apa yang Anda lakukan untuk memfasilitasi pertumbuhan itu?"</em> — sering kali jawaban tersangkut di tenggorokan.</p>
+
+<div class="research">
+  <div class="research-head">
+    <div class="research-logo wef">WEF</div>
+    <div class="research-src">World Economic Forum — "Future of Jobs Report: Manufacturing Sector"</div>
+    <div class="research-year">2025</div>
+  </div>
+  <div class="research-body">WEF memproyeksikan bahwa pada 2027, <strong>44% dari skill yang dibutuhkan untuk posisi manufaktur akan berubah secara fundamental</strong> — didorong oleh elektrifikasi, otomasi, dan digitalisasi rantai nilai. Di sektor otomotif khususnya, teknisi yang hari ini ahli di sistem ICE harus mengakuisisi kompetensi baru dalam sistem elektronis, baterai, dan software-driven manufacturing.<br><br>Implikasinya: <strong>manajer yang tidak aktif men-develop timnya hari ini sedang membangun defisit kompetensi yang akan meledak dalam 2–3 tahun ke depan.</strong> Bukan ancaman hipotetis. Ini sudah terjadi di supplier otomotif Eropa yang lebih dulu memasuki transisi EV.</div>
+</div>
+
+<div class="stat-grid">
+  <div class="scard go">
+    <div class="snum go">94%</div>
+    <div class="slbl">Karyawan yang lebih lama bertahan jika perusahaan berinvestasi pada pengembangan mereka</div>
+    <div class="ssrc">LinkedIn Learning Report, 2024</div>
+  </div>
+  <div class="scard or">
+    <div class="snum or">58%</div>
+    <div class="slbl">Manajer manufaktur yang tidak memiliki rencana pengembangan formal untuk anggota tim kunci mereka</div>
+    <div class="ssrc">Deloitte Manufacturing Talent Survey, 2024</div>
+  </div>
+  <div class="scard te">
+    <div class="snum te">2,1×</div>
+    <div class="slbl">Kecepatan adaptasi lebih tinggi pada tim yang manajernya rutin melakukan coaching</div>
+    <div class="ssrc">Harvard Business Review, Jan 2025</div>
+  </div>
+</div>
+
+<h3 style="font-family:var(--fd);font-size:20px;font-weight:800;color:var(--white);margin:32px 0 16px;">Skill-Will: Kenali Seseorang Sebelum Anda Mendevelop-nya</h3>
+
+<p class="prose">Salah satu kesalahan paling mahal dalam pengembangan tim adalah memberikan solusi yang sama untuk masalah yang berbeda. Mengirim semua orang ke pelatihan teknis ketika masalahnya adalah motivasi. Atau sebaliknya — memberikan motivasi ketika yang dibutuhkan adalah skill nyata.</p>
+
+<p class="prose">Skill-Will Matrix — framework yang dikembangkan oleh Max Landsberg dan dipopulerkan oleh Google's Manager Training — membagi anggota tim ke dalam 4 kuadran berdasarkan dua variabel: <strong>tingkat kompetensi (skill)</strong> dan <strong>tingkat motivasi/keinginan (will).</strong></p>
+
+<div class="framework">
+  <div class="fw-title">Skill-Will Matrix — 4 Kuadran & Pendekatan yang Tepat</div>
+  <div class="fw-item">
+    <div class="fw-num" style="color:var(--green);">↗</div>
+    <div class="fw-body">
+      <div class="fw-label">High Skill · High Will — Delegasi & Stretch</div>
+      <div class="fw-desc">Ini bintang Anda. Jangan micro-manage. Berikan proyek yang lebih besar, tanggung jawab lintas tim, atau peran mentoring untuk junior. Bahaya: jika tidak diberi tantangan baru, mereka pindah atau jatuh ke kuadran sebelah.</div>
+    </div>
+  </div>
+  <div class="fw-item">
+    <div class="fw-num" style="color:var(--orange);">↘</div>
+    <div class="fw-body">
+      <div class="fw-label">High Skill · Low Will — Re-Ignition</div>
+      <div class="fw-desc">Ini yang paling sulit diidentifikasi — karena mereka masih perform, hanya tidak optimal. Biasanya disebabkan oleh: merasa tidak dihargai, pekerjaan terlalu repetitif, atau tidak melihat masa depan mereka di sini. Butuh percakapan personal yang jujur, bukan teguran.</div>
+    </div>
+  </div>
+  <div class="fw-item">
+    <div class="fw-num" style="color:var(--teal);">↖</div>
+    <div class="fw-body">
+      <div class="fw-label">Low Skill · High Will — Coaching & Training</div>
+      <div class="fw-desc">Ini adalah investasi terbaik Anda. Motivasinya ada, skill-nya belum. Berikan pelatihan struktural (Dojo Training Centre IPPI sangat relevan di sini), pasangkan dengan mentor yang tepat, dan beri target yang bertahap dan terukur.</div>
+    </div>
+  </div>
+  <div class="fw-item">
+    <div class="fw-num" style="color:var(--red);">↙</div>
+    <div class="fw-body">
+      <div class="fw-label">Low Skill · Low Will — Diagnosis Mendalam</div>
+      <div class="fw-desc">Sebelum menyimpulkan "orang ini bermasalah," tanyakan: apakah ini sejak awal, atau pernah di kuadran lain lalu jatuh ke sini? Jatuh ke kuadran ini sering kali adalah sinyal dari lingkungan atau kepemimpinan, bukan semata-mata individu.</div>
+    </div>
+  </div>
+</div>
+
+<div class="research">
+  <div class="research-head">
+    <div class="research-logo deloitte">D</div>
+    <div class="research-src">Deloitte — "2024 Global Human Capital Trends: The Human Performance Imperative"</div>
+    <div class="research-year">2024</div>
+  </div>
+  <div class="research-body">Dalam survei terhadap lebih dari 14.000 pemimpin bisnis dan HR di 95 negara, Deloitte menemukan satu gap yang paling konsisten: <strong>manajer tahu mereka harus mengembangkan tim — tapi 67% tidak tahu cara mengidentifikasi kebutuhan pengembangan yang tepat untuk setiap individu.</strong><br><br>Mereka cenderung menggunakan pendekatan satu-ukuran-untuk-semua: mengirim seluruh tim ke training yang sama, memberikan feedback yang generik, atau menunggu annual performance review untuk berbicara tentang pengembangan. Padahal penelitian menunjukkan bahwa feedback yang paling efektif diberikan dalam 24–48 jam setelah kejadian — bukan 6 bulan kemudian di formulir penilaian.</div>
+</div>
+
+<div class="story">
+  <div class="story-kicker">// Insight dari Industri Manufaktur</div>
+  <div class="story-title">Toyota's "Coaching Kata": Setiap Manajer adalah Coach</div>
+  <div class="story-body">Toyota — OEM yang produk akhirnya langsung bersentuhan dengan hasil kerja IPPI — telah lama mengadopsi filosofi yang mereka sebut <strong>"Coaching Kata."</strong> Setiap supervisor dan manajer wajib meluangkan minimal 20 menit per hari untuk coaching satu-satu dengan anggota tim yang sedang menghadapi tantangan.<br><br>Bukan rapat formal. Bukan performance review. Tapi percakapan singkat, terstruktur: <em>"Apa targetmu hari ini? Apa hambatan yang kamu hadapi? Apa yang kamu coba? Apa yang kamu pelajari?"</em><br><br>Hasilnya? Dalam studi yang dilakukan oleh Toyota Institute, pabrik-pabrik yang mengadopsi coaching kata mengalami <strong>penurunan defect rate rata-rata 34% dalam 18 bulan</strong> — tanpa perubahan proses teknis apapun.</div>
+</div>
+
+<div class="insight">
+  <div class="insight-lbl">💡 Insight Kritis — HBR, 2025</div>
+  <div class="insight-body">Harvard Business Review (Januari 2025) menerbitkan analisis dari 3.000 manajer manufaktur di Asia: <strong>manajer yang paling berhasil dalam era transisi teknologi bukan yang paling ahli secara teknis — tapi yang paling mahir dalam mengidentifikasi potensi tersembunyi dalam timnya dan menciptakan kondisi agar potensi itu berkembang.</strong><br><br>Ini penting: di era di mana teknologi berubah lebih cepat dari siklus training, kemampuan untuk "menemukan dan menghidupkan" bakat dalam tim adalah kompetensi kepemimpinan yang paling langka dan paling berharga.</div>
+</div>
+
+<div class="reflect">
+  <div class="reflect-lbl">💭 Pertanyaan Refleksi — Bawa ke Training</div>
+  <div class="reflect-q">Sebutkan nama satu anggota tim Anda. Di kuadran Skill-Will mana mereka berada hari ini, menurut Anda? Di kuadran mana mereka berada 1 tahun lalu?</div>
+  <div class="reflect-q">Kapan terakhir kali Anda melakukan percakapan pengembangan yang tulus dengan seseorang di tim Anda — bukan tentang target, tapi tentang mereka sebagai individu yang ingin bertumbuh?</div>
+  <div class="reflect-q">Jika IPPI mulai beradaptasi ke komponen EV dalam 2 tahun ke depan, siapa di tim Anda yang akan paling siap — dan siapa yang paling perlu persiapan? Apa yang sudah Anda lakukan untuk mempersiapkan mereka?</div>
+</div>
+
+<!-- PART III: CONNECT -->
+<div id="connect" class="part-divider">
+  <div class="part-num">Bagian III · Connect</div>
+  <h2 class="part-title">Komunikasi Lintas<br><em>Batas Departemen</em></h2>
+  <p class="part-lead">Penelitian dari ILO, McKinsey, dan Stanford menunjukkan bahwa kegagalan paling mahal dalam manufaktur jarang disebabkan oleh masalah teknis — hampir selalu disebabkan oleh masalah komunikasi.</p>
+</div>
+
+<p class="prose">Bayangkan skenario ini: Manajer Supply Chain tahu bahwa supplier utama tidak bisa kirim tepat waktu. Ia memilih menunggu — mencoba menyelesaikan sendiri dulu — sebelum melapor ke Production Planning. Dua hari kemudian, D-Line berhenti 6 jam. OEM marah. Semua orang saling menyalahkan.</p>
+
+<p class="prose">Apakah ini cerita tentang kegagalan Supply Chain? Atau kegagalan komunikasi antar departemen? Atau kegagalan budaya kolaborasi yang sudah lama tidak dirawat?</p>
+
+<div class="research">
+  <div class="research-head">
+    <div class="research-logo ilo">ILO</div>
+    <div class="research-src">International Labour Organization — "Workplace Communication Failures in ASEAN Manufacturing"</div>
+    <div class="research-year">2024</div>
+  </div>
+  <div class="research-body">ILO menganalisis 847 insiden operasional signifikan di 120 pabrik manufaktur ASEAN selama 3 tahun. Hasilnya mengejutkan: <strong>78% dari insiden tersebut dapat ditelusuri ke kegagalan komunikasi antar-departemen</strong> — bukan kegagalan teknis, bukan kurangnya investasi peralatan, bukan kompetensi individu.<br><br>Pola yang paling sering ditemukan: <em>informasi kritikal ditahan terlalu lama di satu departemen</em>, karena tidak ada protokol yang jelas tentang kapan dan bagaimana informasi harus disebarkan ke departemen lain. Setiap manajer bekerja dengan asumsi bahwa "masalah departemenku adalah tanggung jawabku untuk selesaikan sendiri."</div>
+</div>
+
+<div class="stat-grid">
+  <div class="scard re">
+    <div class="snum re">86%</div>
+    <div class="slbl">Pemimpin yang menyebut komunikasi lintas departemen sebagai hambatan utama produktivitas mereka</div>
+    <div class="ssrc">McKinsey Organizational Health Survey, 2024</div>
+  </div>
+  <div class="scard go">
+    <div class="snum go">25%</div>
+    <div class="slbl">Peningkatan produktivitas ketika komunikasi internal diperbaiki secara sistematis</div>
+    <div class="ssrc">McKinsey & Co., 2024</div>
+  </div>
+  <div class="scard gr">
+    <div class="snum gr">4,5×</div>
+    <div class="slbl">Lebih mungkin retain karyawan terbaik dengan budaya komunikasi yang transparan</div>
+    <div class="ssrc">Gallup, 2024</div>
+  </div>
+</div>
+
+<h3 style="font-family:var(--fd);font-size:20px;font-weight:800;color:var(--white);margin:32px 0 16px;">Komunikasi Asertif: Berbicara Jelas Tanpa Merusak Relasi</h3>
+
+<p class="prose">Ada satu perbedaan yang sangat penting — dan sering disalahpahami — antara tiga gaya komunikasi: <strong>pasif, agresif, dan asertif.</strong></p>
+
+<p class="prose">Komunikasi <em>pasif</em> adalah ketika Anda mengetahui ada masalah tapi tidak mengatakannya — karena takut konflik, takut disalahkan, atau tidak tahu harus mulai dari mana. Komunikasi <em>agresif</em> adalah ketika Anda menyampaikan masalah tapi dengan cara yang menyerang, menyalahkan, dan merusak relasi. Komunikasi <em>asertif</em> adalah menyampaikan apa yang Anda butuhkan, apa yang Anda amati, dan apa yang Anda harapkan — dengan jelas, langsung, dan tetap menghormati orang yang Anda ajak bicara.</p>
+
+<div class="framework">
+  <div class="fw-title">Model Komunikasi Asertif untuk Konteks Cross-Dept IPPI</div>
+  <div class="fw-item">
+    <div class="fw-num">O</div>
+    <div class="fw-body">
+      <div class="fw-label">Observe — Sampaikan fakta, bukan interpretasi</div>
+      <div class="fw-desc">"Saya melihat bahwa dalam 3 minggu terakhir, informasi perubahan jadwal dari Supply Chain sampai ke Production Planning rata-rata 48 jam setelah perubahan terjadi." — Bukan: "Supply Chain selalu telat melapor."</div>
+    </div>
+  </div>
+  <div class="fw-item">
+    <div class="fw-num">F</div>
+    <div class="fw-body">
+      <div class="fw-label">Feel / Impact — Sampaikan dampak nyata</div>
+      <div class="fw-desc">"Akibatnya, kami tidak punya cukup waktu untuk merestrukturisasi jadwal produksi, dan ini menyebabkan downtime di line kami." — Bukan asumsi tentang niat orang, tapi dampak yang terukur.</div>
+    </div>
+  </div>
+  <div class="fw-item">
+    <div class="fw-num">N</div>
+    <div class="fw-body">
+      <div class="fw-label">Need — Sampaikan kebutuhan yang spesifik</div>
+      <div class="fw-desc">"Yang saya butuhkan adalah notifikasi minimal 72 jam sebelumnya untuk perubahan jadwal pengiriman yang signifikan — bahkan jika status belum 100% pasti." — Bukan: "Tolong lebih komunikatif ya."</div>
+    </div>
+  </div>
+  <div class="fw-item">
+    <div class="fw-num">R</div>
+    <div class="fw-body">
+      <div class="fw-label">Request — Buat kesepakatan yang konkret</div>
+      <div class="fw-desc">"Bisakah kita sepakat hari ini tentang protokol early warning yang kita berdua commit untuk jalankan?" — Tutup dengan tindakan nyata, bukan hanya pemahaman.</div>
+    </div>
+  </div>
+</div>
+
+<div class="research">
+  <div class="research-head">
+    <div class="research-logo hbr">HBR</div>
+    <div class="research-src">Harvard Business Review — "The Hidden Cost of Organizational Silos in Manufacturing"</div>
+    <div class="research-year">2024</div>
+  </div>
+  <div class="research-body">HBR mengidentifikasi bahwa <strong>"silo mentality"</strong> — kecenderungan setiap departemen untuk melindungi informasi dan sumber dayanya sendiri — adalah salah satu penyebab terbesar inefisiensi dalam manufaktur modern. Yang menarik, silo bukan terjadi karena orang tidak mau bekerja sama. Silo terjadi karena tidak ada <strong>sistem yang disengaja untuk mendorong kolaborasi.</strong><br><br>Solusi yang paling efektif bukan workshop teamwork atau gathering — tapi perubahan sederhana dalam rutinitas: <strong>pertemuan koordinasi lintas departemen yang pendek, terfokus, dan regular</strong>. Bahkan 15 menit standing meeting dua kali seminggu antara dua departemen yang sering berinteraksi terbukti mengurangi friction komunikasi hingga 40%.</div>
+</div>
+
+<div class="story">
+  <div class="story-kicker">// Kasus dari Industri Sejenis</div>
+  <div class="story-title">Sense of Crisis: Ketika Semua Orang Merasa Memiliki</div>
+  <div class="story-body">Sebuah Tier-1 supplier otomotif di Korea Selatan — ukuran dan konteks yang sangat mirip IPPI — menghadapi situasi krisis ketika OEM utama mereka mengumumkan penurunan order 25% akibat transisi ke model EV baru.<br><br>Yang membedakan respons mereka dengan supplier lain yang akhirnya menutup operasi: <strong>9 manajer departemen mereka bertemu dalam 6 jam sejak pengumuman — bukan dipanggil oleh Presdir, tapi atas inisiatif sendiri.</strong> Mereka menghabiskan malam membuat peta opsi bersama: kapasitas apa yang bisa dialihkan, kompetensi apa yang bisa ditransfer, proses apa yang perlu dimodifikasi.<br><br>Presdir mereka kemudian berkata dalam sebuah wawancara: <em>"Saya tidak memimpin respons krisis itu. Tim manajer saya yang memimpinnya. Saya hanya perlu memberi ruang dan kepercayaan kepada mereka."</em><br><br>Perusahaan itu tidak hanya survive — tapi dalam 2 tahun berikutnya berhasil memenangkan kontrak stamping untuk dua model EV baru dari OEM yang sama.</div>
+</div>
+
+<div class="insight">
+  <div class="insight-lbl">🔍 Riset Terkini — Gallup, 2024</div>
+  <div class="insight-body">Gallup (2024) menemukan bahwa <strong>karyawan yang memiliki "best friend at work" menghasilkan output 21% lebih tinggi dan 37% lebih jarang absen</strong>. Ini bukan tentang pertemanan saja — ini tentang tingkat koneksi dan rasa saling peduli yang terbentuk di lingkungan kerja. Dan koneksi itu — penelitian ini sangat jelas — dimulai dari manajer yang secara aktif membangun jembatan, bukan silo.</div>
+</div>
+
+<div class="reflect">
+  <div class="reflect-lbl">💭 Pertanyaan Refleksi — Bawa ke Training</div>
+  <div class="reflect-q">Dengan departemen mana Anda paling sering mengalami "friction komunikasi"? Apa yang paling sering menjadi sumber gesekannya?</div>
+  <div class="reflect-q">Kapan terakhir kali Anda menyampaikan sesuatu yang sulit kepada rekan manajer dari departemen lain — dan bagaimana cara Anda menyampaikannya? Apakah hasilnya sesuai yang Anda harapkan?</div>
+  <div class="reflect-q">Jika terjadi krisis besar di IPPI besok pagi — misalnya salah satu OEM tiba-tiba membekukan kontrak — apa yang akan Anda lakukan dalam 6 jam pertama? Siapa yang akan Anda hubungi terlebih dahulu?</div>
+</div>
+
+<!-- HCR CONNECTION -->
+<div id="hcr" class="part-divider">
+  <div class="part-num">Koneksi Framework</div>
+  <h2 class="part-title">High Class Response<br><em>di Konteks IPPI</em></h2>
+  <p class="part-lead">Mengapa kualitas respons Anda — sebagai manajer — adalah kompetensi yang paling menentukan di semua tiga area: Lead, Develop, dan Connect.</p>
+</div>
+
+<p class="prose">Ada satu benang merah yang menghubungkan semua penelitian di atas. Dari psychological safety (LEAD), skill-will coaching (DEVELOP), hingga assertive communication (CONNECT) — semuanya bermuara pada satu hal: <strong>kualitas respons Anda dalam momen-momen yang paling menentukan.</strong></p>
+
+<p class="prose">Coach Harri Firmansyah, dalam bukunya <em>High Class Response</em>, mendefinisikan ini dengan cara yang sangat praktis: <em>"High Class Response bukan tentang memiliki jawaban terbaik. Ini tentang memilih respons yang paling bijaksana, paling manusiawi, dan paling konstruktif — bahkan ketika situasinya memaksa kita untuk bereaksi secara naluri."</em></p>
+
+<div class="pullquote">
+  <div class="pq-text">"Respons yang berkelas bukan lahir dari tidak adanya tekanan. Ia lahir dari kesadaran bahwa saya bisa memilih respons saya — bahkan di tengah tekanan terbesar."</div>
+  <div class="pq-source">Coach Harri Firmansyah · High Class Response</div>
+</div>
+
+<div class="framework" style="background:linear-gradient(135deg,rgba(201,168,76,.08) 0%,rgba(10,191,188,.06) 100%);">
+  <div class="fw-title" style="color:var(--gold-light);">HCR Response Ladder — Dari Reaktif ke Berkelas</div>
+  <div class="fw-item">
+    <div class="fw-num" style="color:var(--red);">1</div>
+    <div class="fw-body">
+      <div class="fw-label" style="color:var(--red);">Reaktif Destruktif</div>
+      <div class="fw-desc">Menyalahkan, marah tidak konstruktif, atau diam dan memendam. Ini adalah respons yang merusak kepercayaan tim dalam hitungan menit — dan butuh berminggu-minggu untuk diperbaiki.</div>
+    </div>
+  </div>
+  <div class="fw-item">
+    <div class="fw-num" style="color:var(--orange);">2</div>
+    <div class="fw-body">
+      <div class="fw-label" style="color:var(--orange);">Reaktif Pasif</div>
+      <div class="fw-desc">Mengabaikan, menunda, atau meminimalisasi masalah. "Nanti dulu," "tidak apa-apa," "selesaikan sendiri dulu." Terlihat netral, tapi sebenarnya membangun budaya penghindaran.</div>
+    </div>
+  </div>
+  <div class="fw-item">
+    <div class="fw-num" style="color:var(--gold);">3</div>
+    <div class="fw-body">
+      <div class="fw-label" style="color:var(--gold);">Responsif Standar</div>
+      <div class="fw-desc">Mendengar, mengakui, dan memberikan respons yang wajar. Ini sudah cukup untuk operasional sehari-hari — tapi tidak cukup untuk membangun tim yang extraordinary.</div>
+    </div>
+  </div>
+  <div class="fw-item">
+    <div class="fw-num" style="color:var(--teal);">4</div>
+    <div class="fw-body">
+      <div class="fw-label" style="color:var(--teal);">Proaktif Berkembang</div>
+      <div class="fw-desc">Merespons dengan pertanyaan yang tepat, membantu orang menemukan solusinya sendiri, dan menggunakan setiap momen sebagai kesempatan pembelajaran. Ini adalah level yang membangun tim yang mandiri.</div>
+    </div>
+  </div>
+  <div class="fw-item">
+    <div class="fw-num" style="color:var(--green);">5</div>
+    <div class="fw-body">
+      <div class="fw-label" style="color:var(--green);">High Class Response</div>
+      <div class="fw-desc">Merespons dengan cara yang tidak hanya menyelesaikan masalah hari ini, tapi membangun kapasitas, kepercayaan, dan budaya tim untuk menghadapi masalah serupa secara mandiri di masa depan. Inilah warisan kepemimpinan yang sesungguhnya.</div>
+    </div>
+  </div>
+</div>
+
+<div class="insight">
+  <div class="insight-lbl">🔗 Koneksi ke F.I.R.S.T. IPPI</div>
+  <div class="insight-body">
+    <div class="first-table">
+      <div class="ft-row"><div class="ft-letter">F</div><div class="ft-content"><div class="ft-word">Focus on Customer</div><div class="ft-link">HCR di LEAD: manajer yang fokus pada "pelanggan internal" (timnya) menghasilkan tim yang fokus pada pelanggan eksternal (OEM). Ripple effect yang dimulai dari cara Anda memimpin.</div></div></div>
+      <div class="ft-row"><div class="ft-letter">I</div><div class="ft-content"><div class="ft-word">Integrity</div><div class="ft-link">HCR di LEAD: integritas terlihat paling jelas bukan ketika segala sesuatunya berjalan baik, tapi ketika Anda harus menyampaikan kabar buruk, mengakui kesalahan, atau mempertahankan standar di tengah tekanan.</div></div></div>
+      <div class="ft-row"><div class="ft-letter">R</div><div class="ft-content"><div class="ft-word">Responsibility</div><div class="ft-link">HCR di DEVELOP: tanggung jawab terdalam seorang manajer bukan pada angka produksi — tapi pada pertumbuhan setiap individu yang dipercayakan dalam kepemimpinannya.</div></div></div>
+      <div class="ft-row"><div class="ft-letter">S</div><div class="ft-content"><div class="ft-word">Synergy</div><div class="ft-link">HCR di CONNECT: sinergi bukan terjadi secara otomatis karena orang "baik-baik saja." Sinergi adalah hasil dari komunikasi yang dirancang dengan sengaja dan dijaga secara konsisten.</div></div></div>
+      <div class="ft-row"><div class="ft-letter">T</div><div class="ft-content"><div class="ft-word">Trustworthiness</div><div class="ft-link">HCR di CONNECT: kepercayaan antar departemen dibangun satu respons pada satu waktu. Setiap kali Anda merespons krisis lintas departemen dengan ownership — bukan dengan silo — Anda menyetor satu koin ke rekening kepercayaan bersama.</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- CLOSING -->
+<div id="closing">
+  <div class="part-divider">
+    <div class="part-num">Penutup</div>
+    <h2 class="part-title">Sebelum Anda<br><em>Datang ke Training</em></h2>
+    <p class="part-lead">Satu hal yang perlu Anda siapkan. Hanya satu.</p>
+  </div>
+
+  <p class="prose">Anda sudah membaca tentang penelitian dari McKinsey, Deloitte, Google, Gallup, MIT, Harvard, WEF, dan ILO. Semua data itu menunjukkan satu hal yang konsisten: <strong>kepemimpinan yang efektif bukan soal tahu — tapi soal berani bertindak berbeda.</strong></p>
+
+  <p class="prose">Training hari itu bukan tentang menerima informasi baru. Ia dirancang untuk menjadi ruang di mana Anda — bersama 8 rekan Dept. Head lainnya — mengambil satu langkah berani: melihat diri Anda sebagai pemimpin dengan jujur, dan memutuskan satu hal yang akan Anda ubah.</p>
+
+  <p class="prose">Tidak perlu mengubah segalanya. Cukup satu hal. Yang nyata. Yang bisa dimulai besok.</p>
+
+  <div class="closing">
+    <div class="closing-title">Satu Hal yang Perlu<br>Anda <em>Siapkan</em></div>
+    <p class="closing-body">Datanglah ke training dengan satu cerita nyata dari departemen Anda — sebuah situasi dalam 3 bulan terakhir yang masih "menggantung" di pikiran Anda. Situasi yang belum sepenuhnya terselesaikan, atau situasi yang ingin Anda tangani secara berbeda jika bisa mengulang. Cerita itu adalah pintu masuk terbaik ke setiap diskusi yang akan kita lakukan bersama.</p>
+    <div class="closing-qs">
+      <div class="closing-q">Apa satu momen kepemimpinan yang Anda rasa bisa Anda tangani lebih baik?</div>
+      <div class="closing-q">Siapa satu orang di tim Anda yang paling membutuhkan perhatian pengembangan dari Anda — dan apa yang menahan Anda?</div>
+      <div class="closing-q">Departemen mana yang paling sering Anda rasakan sulit untuk diajak kolaborasi — dan mengapa?</div>
+      <div class="closing-q">Jika Anda bisa mengubah satu hal dari cara Anda memimpin mulai besok — apa itu?</div>
+    </div>
+    <div class="closing-sig">Sampai bertemu di hari training. Kami siap bersama Anda.<br><br><strong>Coach Harri Firmansyah</strong> · High Class Response<br>PT. IPPI Leadership Training · 2026</div>
+  </div>
+
+  <div style="margin-top:48px;padding:20px 24px;background:var(--navy-mid);border:1px solid var(--border);border-radius:10px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">Referensi Riset yang Digunakan dalam Dokumen ini</div>
+    <div style="display:flex;flex-direction:column;gap:6px;">
+      <div style="font-size:11px;color:rgba(122,139,160,.8);">· IEA Global EV Outlook 2025 — Electric Vehicle Adoption Data</div>
+      <div style="font-size:11px;color:rgba(122,139,160,.8);">· McKinsey Center for Future Mobility — "The Future of Mobility in Southeast Asia" (2024)</div>
+      <div style="font-size:11px;color:rgba(122,139,160,.8);">· McKinsey & Company — "Unlocking Success in Transformations" (2023) & "Organizational Health Survey" (2024)</div>
+      <div style="font-size:11px;color:rgba(122,139,160,.8);">· BloombergNEF — ASEAN Electric Vehicle Outlook Report (2025)</div>
+      <div style="font-size:11px;color:rgba(122,139,160,.8);">· Google — Project Aristotle: What Makes Teams Effective (2016, updated 2023)</div>
+      <div style="font-size:11px;color:rgba(122,139,160,.8);">· Amy Edmondson — "The Fearless Organization" (Harvard Business School, 2023)</div>
+      <div style="font-size:11px;color:rgba(122,139,160,.8);">· Gallup — "State of the Global Workplace 2024" & Workplace Engagement Data</div>
+      <div style="font-size:11px;color:rgba(122,139,160,.8);">· Deloitte — "2024 Global Human Capital Trends: The Human Performance Imperative"</div>
+      <div style="font-size:11px;color:rgba(122,139,160,.8);">· MIT Sloan Management Review — "The Paradox of Vulnerable Leadership" (2024)</div>
+      <div style="font-size:11px;color:rgba(122,139,160,.8);">· World Economic Forum — "Future of Jobs Report: Manufacturing Sector" (2025)</div>
+      <div style="font-size:11px;color:rgba(122,139,160,.8);">· International Labour Organization — "Workplace Communication Failures in ASEAN Manufacturing" (2024)</div>
+      <div style="font-size:11px;color:rgba(122,139,160,.8);">· Harvard Business Review — "The Hidden Cost of Organizational Silos" (2024) & "Coaching in Manufacturing" (Jan 2025)</div>
+      <div style="font-size:11px;color:rgba(122,139,160,.8);">· LinkedIn Workforce Report 2024 — Talent Retention & Manager Impact</div>
+      <div style="font-size:11px;color:rgba(122,139,160,.8);">· Harri Firmansyah — "High Class Response" (HCR Framework)</div>
+    </div>
+  </div>
+
+</div>
+
+</div><!-- /article -->
+
+</body>
+</html>
